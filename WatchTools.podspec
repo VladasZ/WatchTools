@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name           = 'WatchTools'
-s.version        = '0.1'
+s.version        = '0.1.2'
 s.summary        = "WatchOS tools kit to make your life easier."
 s.homepage       = "https://github.com/VladasZ/WatchTools"
 s.author         = { 'Vladas Zakrevskis' => '146100@gmail.com' }
