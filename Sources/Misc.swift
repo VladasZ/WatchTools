@@ -10,6 +10,7 @@ import WatchKit
 import SwiftyTools
 
 public var rootController: WKInterfaceController {
+    
     guard let controller = WKExtension.shared().rootInterfaceController
         else { Log.error(); return WKInterfaceController() }    
     return controller
