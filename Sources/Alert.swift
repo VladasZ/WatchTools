@@ -13,7 +13,6 @@ public class Alert {
     public static func show(_ message: String) {
         
         let action = WKAlertAction(title: "OK", style: .default, handler: { })
-        
         rootController.presentAlert(withTitle: message, message: nil, preferredStyle: .alert, actions: [action])
     }
 }

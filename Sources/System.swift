@@ -20,6 +20,13 @@ public enum WatchModel : CustomStringConvertible {
         case ._42mm: return "Apple Watch 42mm"
         }
     }
+    
+    public var statusBarHeight: CGFloat {
+        switch self {
+        case ._38mm: return 19
+        case ._42mm: return 21
+        }
+    }
 }
 
 public extension CGSize {
@@ -35,7 +42,7 @@ public class System {
     
     public static var model: WatchModel { return screenSize.height == CGFloat(170.0) ? ._38mm : ._42mm }
     public static var screenSize: CGSize { return device.screenBounds.size }
-    public static var controllerSize: CGSize { return CGSize(screenSize.width, screenSize.height - 20) }
+    public static var controllerSize: CGSize { return CGSize(screenSize.width, screenSize.height - model.statusBarHeight) }
     public static var renderImageSize: CGSize { return CGSize(controllerSize.height, controllerSize.height).pixels }
 
 }
